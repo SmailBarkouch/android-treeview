@@ -22,21 +22,21 @@ class CustomViewHolderFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_default, container, false)
         val containerView = rootView.findViewById(R.id.container) as ViewGroup
-        rootView.findViewById(R.id.status_bar).visibility = View.GONE
+        rootView.findViewById<View>(R.id.status_bar).visibility = View.GONE
 
         val root = TreeNode.root()
 
-        val myProfile = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "My Profile")).setViewHolder(ProfileHolder(activity))
-        val bruce = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "Bruce Wayne")).setViewHolder(ProfileHolder(activity))
-        val clark = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "Clark Kent")).setViewHolder(ProfileHolder(activity))
-        val barry = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "Barry Allen")).setViewHolder(ProfileHolder(activity))
+        val myProfile = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "My Profile")).setViewHolder(ProfileHolder(requireContext()))
+        val bruce = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "Bruce Wayne")).setViewHolder(ProfileHolder(requireContext()))
+        val clark = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "Clark Kent")).setViewHolder(ProfileHolder(requireContext()))
+        val barry = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_person, "Barry Allen")).setViewHolder(ProfileHolder(requireContext()))
         addProfileData(myProfile)
         addProfileData(clark)
         addProfileData(bruce)
         addProfileData(barry)
         root.addChildren(myProfile, bruce, barry, clark)
 
-        tView = AndroidTreeView(activity, root)
+        tView = AndroidTreeView(requireContext(), root)
         tView!!.setDefaultAnimation(true)
         tView!!.setDefaultContainerStyle(R.style.TreeNodeStyleDivided, true)
         containerView.addView(tView!!.view)
@@ -52,16 +52,16 @@ class CustomViewHolderFragment : Fragment() {
     }
 
     private fun addProfileData(profile: TreeNode) {
-        val socialNetworks = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_people, "Social")).setViewHolder(HeaderHolder(activity))
-        val places = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_place, "Places")).setViewHolder(HeaderHolder(activity))
+        val socialNetworks = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_people, "Social")).setViewHolder(HeaderHolder(requireContext()))
+        val places = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_place, "Places")).setViewHolder(HeaderHolder(requireContext()))
 
-        val facebook = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_facebook)).setViewHolder(SocialViewHolder(activity))
-        val linkedin = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_linkedin)).setViewHolder(SocialViewHolder(activity))
-        val google = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_gplus)).setViewHolder(SocialViewHolder(activity))
-        val twitter = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_twitter)).setViewHolder(SocialViewHolder(activity))
+        val facebook = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_facebook)).setViewHolder(SocialViewHolder(requireContext()))
+        val linkedin = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_linkedin)).setViewHolder(SocialViewHolder(requireContext()))
+        val google = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_gplus)).setViewHolder(SocialViewHolder(requireContext()))
+        val twitter = TreeNode(SocialViewHolder.SocialItem(R.string.ic_post_twitter)).setViewHolder(SocialViewHolder(requireContext()))
 
-        val lake = TreeNode(PlaceHolderHolder.PlaceItem("A rose garden")).setViewHolder(PlaceHolderHolder(activity))
-        val mountains = TreeNode(PlaceHolderHolder.PlaceItem("The white house")).setViewHolder(PlaceHolderHolder(activity))
+        val lake = TreeNode(PlaceHolderHolder.PlaceItem("A rose garden")).setViewHolder(PlaceHolderHolder(requireContext()))
+        val mountains = TreeNode(PlaceHolderHolder.PlaceItem("The white house")).setViewHolder(PlaceHolderHolder(requireContext()))
 
         places.addChildren(lake, mountains)
         socialNetworks.addChildren(facebook, google, twitter, linkedin)

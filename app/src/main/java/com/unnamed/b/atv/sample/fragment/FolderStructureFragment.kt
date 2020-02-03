@@ -56,7 +56,7 @@ class FolderStructureFragment : Fragment() {
 
         root.addChildren(computerRoot)
 
-        tView = AndroidTreeView(activity, root)
+        tView = AndroidTreeView(requireContext(), root)
         tView!!.setDefaultAnimation(true)
         tView!!.setDefaultContainerStyle(R.style.TreeNodeStyleCustom)
         tView!!.setDefaultViewHolder(IconTreeItemHolder::class.java)

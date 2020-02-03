@@ -23,22 +23,22 @@ class TwoDScrollingArrowExpandFragment : Fragment(), TreeNode.TreeNodeClickListe
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_selectable_nodes, null, false)
-        rootView.findViewById(R.id.status).visibility = View.GONE
+        rootView.findViewById<View>(R.id.status).visibility = View.GONE
         val containerView = rootView.findViewById(R.id.container) as ViewGroup
 
         val root = TreeNode.root()
 
         val s1 = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_folder, "Folder with very long name ")).setViewHolder(
-                ArrowExpandSelectableHeaderHolder(activity))
+                ArrowExpandSelectableHeaderHolder(requireContext()))
         val s2 = TreeNode(IconTreeItemHolder.IconTreeItem(R.string.ic_folder, "Another folder with very long name")).setViewHolder(
-                ArrowExpandSelectableHeaderHolder(activity))
+                ArrowExpandSelectableHeaderHolder(requireContext()))
 
         fillFolder(s1)
         fillFolder(s2)
 
         root.addChildren(s1, s2)
 
-        tView = AndroidTreeView(activity, root)
+        tView = AndroidTreeView(requireContext(), root)
         tView!!.setDefaultAnimation(true)
         tView!!.setUse2dScroll(true)
         tView!!.setDefaultContainerStyle(R.style.TreeNodeStyleCustom)
