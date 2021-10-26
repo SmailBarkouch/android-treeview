@@ -1,5 +1,7 @@
 # android-treeview
 
+[![](https://jitpack.io/v/SmailBarkouch/AndroidTreeView.svg)](https://jitpack.io/#SmailBarkouch/AndroidTreeView)
+
 ### Recent changes
 
 
@@ -7,12 +9,9 @@ Entire library code converted to Kotlin for better stability and reducing null p
 
 2D scrolling mode added, keep in mind this comes with few limitations: you won't be able not place views on right side like alignParentRight. Everything should be align left. Is not enabled by default
 
+### Use in your project
 
-### Description
-
-Treeview implementation for android
-
-[![](https://jitpack.io/v/SmailBarkouch/AndroidTreeView.svg)](https://jitpack.io/#SmailBarkouch/AndroidTreeView)
+Click [here](https://jitpack.io/#SmailBarkouch/AndroidTreeView) for a info on how to use it in your android application.
 
 ### Features
 + 1. N - level expandable/collapsable tree
@@ -89,7 +88,3 @@ AndroidTreeView.setDefaultViewHolder
 AndroidTreeView.setDefaultNodeClickListener
 ...
 ```
-
-For more details use sample application as example
-
-Let me know if i missed something, appreciate your support, thanks!
