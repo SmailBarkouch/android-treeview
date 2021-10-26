@@ -1,5 +1,4 @@
-AndroidTreeView
-====================
+# android-treeview
 
 ### Recent changes
 
@@ -11,14 +10,9 @@ Entire library code converted to Kotlin for better stability and reducing null p
 
 ### Description
 
-Tree view implementation for android
+Treeview implementation for android
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidTreeView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1534)
-
-### Demo
-
-[![AndroidTreeView Demo on Google Play Store](http://style.anu.edu.au/_anu/images/icons/icon-google-play-small.png)](https://play.google.com/store/apps/details?id=com.unnamed.b.atv.demo)
-
+[![](https://jitpack.io/v/SmailBarkouch/AndroidTreeView.svg)](https://jitpack.io/#SmailBarkouch/AndroidTreeView)
 
 ### Features
 + 1. N - level expandable/collapsable tree
@@ -107,7 +101,3 @@ AndroidTreeView.setDefaultNodeClickListener
 For more details use sample application as example
 
 Let me know if i missed something, appreciate your support, thanks!
-
-### Projects using this library
-
-[Blue Dot : World Chat](https://play.google.com/store/apps/details?id=com.commandapps.bluedot)
