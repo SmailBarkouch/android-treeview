@@ -11,7 +11,7 @@ Entire library code converted to Kotlin for better stability and reducing null p
 
 ### Use in your project
 
-Click [here](https://jitpack.io/#SmailBarkouch/android-treeview) for a info on how to use it in your android application.
+Click [here](https://jitpack.io/#SmailBarkouch/android-treeview) for info on how to use this library in your android application.
 
 ### Features
 + 1. N - level expandable/collapsable tree
