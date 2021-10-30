@@ -30,7 +30,7 @@ Click [here](https://jitpack.io/#SmailBarkouch/android-treeview) for info on how
 
 **1)** Add library as a dependency to your project 
 
-```compile 'com.github.bmelnychuk:atv:1.3.+'```
+```implementation 'com.github.SmailBarkouch:android-treeview:1.0.0'```
 
 **2)** Create your tree starting from root element. ```TreeNode.root()``` element will not be displayed so it doesn't require anything to be set.
 ```Kotlin
